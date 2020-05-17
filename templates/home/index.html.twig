@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello HomeController!{% endblock %}
+{% block title %}Home Page {% endblock %}
 
 {% block body %}
 <style>
@@ -8,22 +8,31 @@
     .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
 </style>
 
-    <div class="container middle-screen">
+    <div class="contenu">
             <a href="{{ path('login') }}">Login</a>
             <a href="{{ path('logout') }}">Logout</a>
 
-            {# Pour plus tard #}
-            <div>
+            {# Pour plus tard
+            <div class="navbar">
                 <ul class="home-box">
                     <a href="/ingredients"><li class="home-box-items"><div class="red">Mes ingrédients</div></li></a>
                     <a href="/recipes"><li class="home-box-items"><div class="green">Mes recettes</div></li></a>
                     <a href="/shared-recipes"><li class="home-box-items"><div class="yellow">Recettes de la communauté</div></li></a>
                     <a href="/account/profile"><li class="home-box-items"><div class="orange">Voir mon profil</div></li></a>
                 </ul>
-            </div>
-            <div>
-                <p>Contenu a mettre ici</p>
-                <p>Je m'occupe du design et du contenu bientôt</p>
+            </div> #}
+            <div class="contenu-core">
+                <h1>CUISTO DINGO</h1>
+                <p>Bienvenue sur Cuisto Dingo !</p>
+                <p>Pour tout les dingos de cuisine, Cuisto Dingo vous permet plusieurs fonctionnalités :</p>
+                <ul>
+                    <li>Ajouter des ingrédients tous plus dingos les uns que les autres</li>
+                    <li>Créer des recettes complètement DINGO !</li>
+                    <li>Partager vos recettes</li>
+                    <li>Et consulter les recettes les plus DINGO</li>
+                </ul>
+                <p>Nous vous souhaitons bonne navigation sur le site</p>
+                <p>Et surtout faite sortir votre créativité</p>
             </div>
     </div>
 {% endblock %}
