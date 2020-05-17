@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HomeController!{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+    <div class="container middle-screen">
+            <a href="{{ path('login') }}">Login</a>
+            <a href="{{ path('logout') }}">Logout</a>
+
+            {# Pour plus tard #}
+            <div>
+                <ul class="home-box">
+                    <a href="/ingredients"><li class="home-box-items"><div class="red">Mes ingrédients</div></li></a>
+                    <a href="/recipes"><li class="home-box-items"><div class="green">Mes recettes</div></li></a>
+                    <a href="/shared-recipes"><li class="home-box-items"><div class="yellow">Recettes de la communauté</div></li></a>
+                    <a href="/account/profile"><li class="home-box-items"><div class="orange">Voir mon profil</div></li></a>
+                </ul>
+            </div>
+            <div>
+                <p>Contenu a mettre ici</p>
+                <p>Je m'occupe du design et du contenu bientôt</p>
+            </div>
+    </div>
+{% endblock %}
