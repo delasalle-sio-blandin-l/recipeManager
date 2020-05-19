@@ -2,6 +2,8 @@
 
 namespace App\Controller;
 
+use App\Entity\User;
+use App\Form\RegisterType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Request; 
@@ -33,10 +35,10 @@ class RegisterController extends AbstractController
 
             $this->addFlash(
                 'success',
-                "Votre compte est créé !"
+                "Compte créé avec succès !"
             );
 
-            return $this->redirectToRoute("register");
+            return $this->redirectToRoute("login");
         }
 
         return $this->render('register/register.html.twig', [

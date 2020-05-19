@@ -108,6 +108,25 @@ a {
 
 /* LOGIN FORM */ 
 
+.contenu-login
+{ 
+  margin: 1em auto; 
+  max-width: 800px; 
+  width: 95%; 
+  font: 18px/1.5 sans-serif; 
+}
+
+.contenu-login code 
+{ 
+  background: #F5F5F5; 
+  padding: 2px 6px; 
+}
+
+.error 
+{ 
+  color:red 
+}
+
 .form-login {
     width: 50%;
     margin: 3.125rem auto 0 auto;
@@ -138,7 +157,8 @@ label {
     background-clip: padding-box;
 }
 
-.login-button {
+.login-button
+{
     font-size: 1.1rem;
     display: block;
     width: 93%;
@@ -147,5 +167,32 @@ label {
     background: var(--main-darkblue);
     color: var(--main-white);
     cursor: pointer;
-  }
+}
+
+
+/* REGISTER FORM */
+
+
+
+.form-register {
+  width: 50%;
+  margin: 3.125rem auto 0 auto;
+  background: var(--main-black-blue2);
+  padding: 2.5rem 0.625rem;
+  border-radius: 0.5rem;
+  margin: auto;
+}
+
+
+.register-button {
+  font-size: 1.1rem;
+  display: block;
+  width: 93%;
+  border: none;
+  padding: 0.75rem;
+  background: var(--main-darkblue);
+  color: var(--main-white);
+  cursor: pointer;
+}
+
 
