@@ -56,6 +56,43 @@ ul {
     margin-top: 20px;
 }
 
+/* lien de la barre de navigation */
+a {
+  text-decoration: none;
+  color: var(--main-light-blue);
+}
+
+/* NAV BAR*/
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+  background: var(--main-black-blue);
+}
+
+/* Class regroupant les onglets */
+.nav-list {
+  display: flex;
+}
+
+.nav-list li {
+  margin-right: 30px;
+}
+
+/* Class regroupant les liens des onglets */
+.nav-list a {
+  font-size: 1.1rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: normal;
+}
+
+/* Lien des onglets au survol */
+.nav-list a:hover {
+  color: var(--main-white);
+}
+
 
 /* HOME PAGE */
 
