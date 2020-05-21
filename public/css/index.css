@@ -126,11 +126,10 @@ a {
 
 .form-login {
     width: 50%;
-    margin: 3.125rem auto 0 auto;
+    margin: 3.125rem auto 1.5rem auto;
     background: var(--main-black-blue2);
     padding: 2.5rem 0.625rem;
     border-radius: 0.5rem;
-    margin: auto;
 }
 
 label {
@@ -165,6 +164,10 @@ label {
     cursor: pointer;
 }
 
+.contenu-login a {
+ margin-left: 22rem;
+ color: var(--main-black);
+}
 
 /* REGISTER FORM */
 
@@ -177,11 +180,10 @@ label {
 
 .form-register {
   width: 50%;
-  margin: 3.125rem auto 0 auto;
+  margin: 3.125rem auto 1.5rem auto;
   background: var(--main-black-blue2);
   padding: 2.5rem 0.625rem;
   border-radius: 0.5rem;
-  margin: auto;
 }
 
 
@@ -196,4 +198,7 @@ label {
   cursor: pointer;
 }
 
-
+.contenu-register a {
+  margin-left: 22rem;
+  color: var(--main-black);
+ }
