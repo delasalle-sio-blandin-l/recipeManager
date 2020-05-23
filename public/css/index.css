@@ -125,43 +125,43 @@ a {
 }
 
 .form-login {
-    width: 50%;
-    margin: 3.125rem auto 1.5rem auto;
-    background: var(--main-black-blue2);
-    padding: 2.5rem 0.625rem;
-    border-radius: 0.5rem;
+  width: 50%;
+  margin: 3.125rem auto 1.5rem auto;
+  background: var(--main-black-blue2);
+  padding: 2.5rem 0.625rem;
+  border-radius: 0.5rem;
 }
 
 label {
-    font-family: 'Poppins', sans-serif;
-    align-items: center;
-    font-size: 1.3rem;
-    color: var(--main-white);
+  font-family: 'Poppins', sans-serif;
+  align-items: center;
+  font-size: 1.3rem;
+  color: var(--main-white);
 }
 
 .input-username, 
 .input-password {
-    width: 93%;
-    height: 1.8rem;
-    border: 1px solid #ced4da;
-    border-radius: 0.25rem;
-    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-    display: block;
-    padding: 0.2rem 0.75rem;
-    color: #495057;
-    background-color: #fff;
-    background-clip: padding-box;
+  width: 93%;
+  height: 1.8rem;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  display: block;
+  padding: 0.2rem 0.75rem;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
 }
 
 .login-button {
-    font-size: 1.1rem;
-    display: block;
-    width: 93%;
-    border: none;
-    padding: 0.75rem;
-    background: var(--main-darkblue);
-    color: var(--main-white);
-    cursor: pointer;
+  font-size: 1.1rem;
+  display: block;
+  width: 93%;
+  border: none;
+  padding: 0.75rem;
+  background: var(--main-darkblue);
+  color: var(--main-white);
+  cursor: pointer;
 }
 
 .contenu-login a {
@@ -201,4 +201,34 @@ label {
 .contenu-register a {
   margin-left: 22rem;
   color: var(--main-black);
- }
+}
+
+/* INGREDIENTS */
+
+.add-ingredient {
+  margin: 1rem auto 0 19rem;
+}
+
+/* AJOUT INGREDIENTS */
+
+.ajout-ingredient-button {
+  margin-left: 80px;
+  font-size: 1.1rem;
+  display: block;
+  width: 50%;
+  border: none;
+  padding: 0.75rem;
+  background: var(--main-darkblue);
+  color: var(--main-white);
+  cursor: pointer;
+}
+
+.form-add-ingredient {
+  width: 50%;
+  margin: 3.125rem auto 1.5rem auto;
+  background: var(--main-black-blue2);
+  padding: 2.5rem 0.625rem;
+  border-radius: 0.5rem;
+}
+
+

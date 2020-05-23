@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Ingredient{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<div class="example-wrapper">
+    <h1>MES INGREDIENTS</h1>
+
+    {# {% if ingredient.count < 0 %} #}
+        <p>Vous n'avez actuellement aucun ingrédients commencez par en ajouter un : </p>
+
+        <a class="add-ingredient" href="/ingredient/add">Ajouter des ingrédients</a>
+        
+    {# {% else %} #}
+
+    {# AFFICHER LA LISTE DES INGREDIENTS DE L'UTILISATEUR CONNECTE #}
+
+    {# POUVOIR AJOUTER ET SUPPRIMER DES PRODUITS #}
+
+    {# {% end if %} #}
+</div>
+{% endblock %}

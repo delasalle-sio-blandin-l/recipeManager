@@ -2,13 +2,22 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
+        <title>{% block title %}Cuisto Dingo{% endblock %}</title>
 
-         <link rel="stylesheet" href="css/index.css">
+         <link rel="stylesheet" href="/css/index.css">
         {% block stylesheets %}{% endblock %}
-        
+         
     </head>
     <body>
+        {# Barre de navigation avec les onglets #}
+        <nav class="navbar">
+            <ul class="nav-list">
+                <li class="nav-link"><a href="/">Accueil</a></li>
+                <li class="nav-link"><a href="/ingredient">Mes ingrédients</a></li>
+                <li class="nav-link"><a href="/profile">Mon profil</a></li>
+                <li class="nav-link"><a href="{{ path('logout') }}">Logout</a></li>
+            </ul>
+        </nav>
         {% block body %}{% endblock %}
         {% block javascripts %}{% endblock %}
     </body>

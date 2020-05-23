@@ -17,9 +17,9 @@ class RegisterController extends AbstractController
      * 
      * @Route("/register", name="register")
      * 
-     * @return Response
      */
     public function register(Request $request, EntityManagerInterface $manager, UserPasswordEncoderInterface $encoder) {
+        
         $user = new User();
 
         $form = $this->createForm(RegisterType::class, $user);
