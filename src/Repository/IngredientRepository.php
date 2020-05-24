@@ -12,7 +12,7 @@ use Doctrine\Persistence\ManagerRegistry;
  * @method Ingredients[]    findAll()
  * @method Ingredients[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  */
-class IngredientsRepository extends ServiceEntityRepository
+class IngredientRepository extends ServiceEntityRepository
 {
     public function __construct(ManagerRegistry $registry)
     {

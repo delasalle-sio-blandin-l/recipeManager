@@ -7,25 +7,31 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * @ORM\Entity(repositoryClass=IngredientsRepository::class)
- */
+*/
 class Ingredients
 {
     /**
      * @ORM\Id()
      * @ORM\GeneratedValue()
      * @ORM\Column(type="integer")
-     */
+    */
     private $id;
 
     /**
      * @ORM\Column(type="string", length=255)
-     */
+    */
     private $name;
 
     /**
      * @ORM\Column(type="float")
-     */
+    */
     private $price;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\User", inversedBy="ingredients")
+    */
+    private $user;
+
 
     public function getId(): ?int
     {
@@ -52,6 +58,18 @@ class Ingredients
     public function setPrice(float $price): self
     {
         $this->price = $price;
+
+        return $this;
+    }
+
+    public function getUser(): ?User
+    {
+        return $this->user;
+    }
+
+    public function setUser(?User $user): self
+    {
+        $this->user = $user;
 
         return $this;
     }

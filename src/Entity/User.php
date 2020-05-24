@@ -5,33 +5,48 @@ namespace App\Entity;
 use App\Repository\UserRepository;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
+use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 
 /**
  * @ORM\Entity(repositoryClass=UserRepository::class)
- */
+*/
 class User implements UserInterface
 {
     /**
      * @ORM\Id()
      * @ORM\GeneratedValue()
      * @ORM\Column(type="integer")
-     */
+    */
     private $id;
 
     /**
      * @ORM\Column(type="string", length=255, unique=true)
-     */
+    */
     private $username;
 
     /**
      * @ORM\Column(type="string", length=255)
-     */
+    */
     private $password;
 
     /**
      * @ORM\Column(type="string", length=255, unique=true)
-     */
+    */
     private $email;
+
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\Ingredients", mappedBy="user")
+    */
+    private $ingredients;
+
+    public function __construct()
+    {
+        $this->ingredients = new ArrayCollection();
+    }
+
 
     public function getId(): ?int
     {
@@ -87,6 +102,4 @@ class User implements UserInterface
     public function eraseCredentials(){
          
     }
-
-
 }

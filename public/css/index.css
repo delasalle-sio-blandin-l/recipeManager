@@ -209,6 +209,14 @@ label {
   margin: 1rem auto 0 19rem;
 }
 
+.list-ingredient {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+
+
 /* AJOUT INGREDIENTS */
 
 .ajout-ingredient-button {
