@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello ProfileController!{% endblock %}
+{% block title %}Votre Profil{% endblock %}
 
 {% block body %}
 <style>
@@ -19,12 +19,16 @@
 </nav>
 
 <div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+    <h3>Bienvenue sur votre profil {{ app.user.username }}</h3>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'C:/wamp/www/Projet/projetJ2E/src/Controller/ProfileController.php'|file_link(0) }}">src/Controller/ProfileController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'C:/wamp/www/Projet/projetJ2E/templates/profile/index.html.twig'|file_link(0) }}">templates/profile/index.html.twig</a></code></li>
-    </ul>
+    <div class="affichage-pseudo">
+        <p>Votre nom d'utilisateur : {{ app.user.username }} </p>
+        <a class="modif-username" href="/profile/updateUsername">Modifier</a>
+    </div>
+
+    <div class="affichage-password">
+        <p>Votre mot de passe : {{ app.user.password }} </p>
+        <a class="modif-password" href="/profile/updatePwd">Modifier</a>
+    </div>
 </div>
 {% endblock %}
