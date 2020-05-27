@@ -9,7 +9,6 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Request; 
 use Doctrine\ORM\EntityManagerInterface;
-use Symfony\Component\HttpFoundation\Response;
 
 
 
@@ -55,7 +54,7 @@ class IngredientController extends AbstractController
      * @Route("/ingredient/add", name="create_ingredient")
      *
     */
-    public function createIngredient(Request $request, EntityManagerInterface $manager): Response 
+    public function createIngredient(Request $request, EntityManagerInterface $manager)
     {
         $user = $this->getUser();
 
@@ -72,7 +71,7 @@ class IngredientController extends AbstractController
             $manager->persist($ingredient);
             $manager->flush();
 
-            return new Response('Ingrédient ajouté');
+            return $this->redirectToRoute('ingredient');
         
         }
 
@@ -87,15 +86,15 @@ class IngredientController extends AbstractController
      * @Route("/ingredient/delete", name="delete_ingredient")
      *
     */
-    public function deleteIngredient(EntityManagerInterface $manager, IngredientRepository $ingredientRepo, $id): Response
+    public function deleteIngredient(EntityManagerInterface $manager, IngredientRepository $ingredientRepo, $id)
     {
         $user = $this->getUser();
 
-        $ingredient = $ingredientRepo->findBy(['id' => $id]);
+        $ingredient = $ingredientRepo->findOneBy(['id' => $id]);
 
         $entityManager->remove($ingredient);
         $entityManager->flush();
 
-        return new Response('Ingrédient avec l\'id '.$ingredient->getId().' à été supprimé');
+        return $this->redirectToRoute('ingredient');
     }
 }

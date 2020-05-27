@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Ajout d'ingredient{% endblock %}
+{% block title %}Modification du pseudo{% endblock %}
 
 {% block body %}
 <style>
@@ -19,13 +19,12 @@
 </nav>
 
 <div class="example-wrapper">
-    <h1>AJOUTER DES INGREDIENTS</h1>
+    <h1>MODIFIER VOTRE PSEUDO</h1>
         
     <div class="form-add-ingredient">
         {{ form_start(form) }}
-        {{ form_row(form.name) }}
-        {{ form_row(form.price) }}
-        <input type="submit" class="ajout-ingredient-button" value="AJOUTER">
+        {{ form_row(form.username) }}
+        <input type="submit" class="ajout-ingredient-button" value="MODIFIER">
         {{ form_end(form) }}
     </div>
 </div>
