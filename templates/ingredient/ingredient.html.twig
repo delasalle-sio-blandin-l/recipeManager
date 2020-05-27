@@ -26,7 +26,7 @@
     {% for ingredient in ingredients %}
             <div class="list-ingredient" data-id="{{ ingredient["id"] }}">
                 <div class="item-ingredient" data-id="{{ ingredient["id"] }}">{{ ingredient["name"] }}, prix : {{ ingredient["price"] }} €</div>
-                <div data-id="{{ ingredient["id"] }}"><a class="delete-ingredient" href="/ingredient/delete">Supprimer</a></div>
+                <div data-id="{{ ingredient["id"] }}"><a class="delete-ingredient" href="/ingredient/delete/{{ ingredient["id"] }}">Supprimer</a></div>
             </div>
     {% endfor %}
 

@@ -83,18 +83,26 @@ class IngredientController extends AbstractController
     /**
      * Delete ingredient
      * 
-     * @Route("/ingredient/delete", name="delete_ingredient")
+     * @Route("/ingredient/delete/{id}", name="delete_ingredient")
+     * 
+     * *
+     * @param [int] $id
+     * @param EntityManagerInterface $manager
+     * @param IngredientRepository $ingredientRepo
+     * *
      *
-    */
-    public function deleteIngredient(EntityManagerInterface $manager, IngredientRepository $ingredientRepo, $id)
+     */
+    public function deleteIngredient($id, EntityManagerInterface $manager, IngredientRepository $ingredientRepo)
     {
         $user = $this->getUser();
 
-        $ingredient = $ingredientRepo->findOneBy(['id' => $id]);
+        $ingredient = $ingredientRepo->find(['id' => $id]);
 
-        $entityManager->remove($ingredient);
-        $entityManager->flush();
+        $manager->remove($ingredient);
+        $manager->flush();
 
         return $this->redirectToRoute('ingredient');
     }
 }
+
+
