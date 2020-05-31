@@ -33,7 +33,7 @@ class Recipe
     private $instruction;
 
     /**
-     * @ORM\Column(type="time")
+     * @ORM\Column(type="integer")
      */
     private $preparationTime;
 
@@ -51,6 +51,18 @@ class Recipe
      * @ORM\Column(type="float")
      */
     private $totalPrice;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\User", inversedBy="recipe")
+    */
+    private $user;
+
+    
+     /**
+     * @ORM\Column(type="integer")
+     */
+    private $isShare = 0;
+
 
     public function getId(): ?int
     {
@@ -93,17 +105,19 @@ class Recipe
         return $this;
     }
 
-    public function getPreparationTime(): ?\DateTimeInterface
+    public function getPreparationTime(): ?int
     {
         return $this->preparationTime;
     }
 
-    public function setPreparationTime(\DateTimeInterface $preparationTime): self
+    public function setPreparationTime(int $preparationTime): self
     {
         $this->preparationTime = $preparationTime;
 
         return $this;
     }
+
+
 
     public function getLevel(): ?string
     {
@@ -140,4 +154,29 @@ class Recipe
 
         return $this;
     }
+
+    public function getUser(): ?User
+    {
+        return $this->user;
+    }
+
+    public function setUser(?User $user): self
+    {
+        $this->user = $user;
+
+        return $this;
+    }
+
+
+    public function getIsShare(): ?int
+    {
+        return $this->isShare;
+    }
+
+    public function setIsShare(int $isShare): self
+    {
+        $this->isShare = $isShare;
+        return $this;
+    }
+    
 }

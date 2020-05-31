@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Recette{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+
+
+<div class="example-wrapper">
+    <h1>MES RECETTES</h1>
+
+     {# POUVOIR AJOUTER DES NOUVELLES RECETTES #}
+
+    <a class="add-recipe" href="/recipe/add">Ajouter des Recettes</a>
+        
+    {# AFFICHER LA LISTE DES RECETTES DE L'UTILISATEUR CONNECTE #}
+
+    {% for recipe in recipe %}
+            <div class="list-recipe" data-id="{{ recipe["id"] }}">
+                <div class="item-recipe" data-id="{{ recipe["id"] }}">
+                <div style="text-align: center"><B>{{ recipe["name"] }} </B></div><br>
+                description : {{ recipe["description"] }} <br>
+                instruction : {{ recipe["instruction"] }} <br>
+                Temps de préparation : {{ recipe["preparation_time"] }} Minutes<br> 
+                niveau : {{ recipe["level"] }} <br>
+                <img src="{{ recipe["pictures"] }}" /> <br>
+                prix : {{ recipe["totalPrice"] }} €</div>
+                <div data-id="{{ recipe["id"] }}">
+                    <a class="delete-recipe" href="/recipe/delete/{{ recipe["id"] }}">Supprimer</a> <br>
+                    <a class="delete-recipe" href="/recipe/share/{{ recipe["id"] }}">Partager</a>
+               </div>
+
+            </div>
+    {% endfor %}
+
+   
+</div>
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Recette{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+
+<div class="example-wrapper">
+    <h1>RECETTES PARTAGÉES</h1>
+        
+    {# AFFICHER LA LISTE DES RECETTES#}
+
+    {% for share in share %}
+
+            <div class="list-recipe" >
+                <div style="text-align: center"><B>{{ share["name"] }} </B></div><br>
+                description : {{ share["description"] }} <br>
+                instruction : {{ share["instruction"] }} <br>
+                Temps de préparation : {{ share["preparation_time"] }} Minutes<br> 
+                niveau : {{ share["level"] }} <br>
+                <img src="{{ share["pictures"] }}" /> <br>
+                prix : {{ share["totalPrice"] }} €</div>
+            </div>
+
+    {% endfor %}
+
+   
+</div>
+{% endblock %}
