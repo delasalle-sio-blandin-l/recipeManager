@@ -8,7 +8,17 @@
     .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
 </style>
 
-
+{# Barre de navigation avec les onglets #}
+<nav class="navbar">
+    <ul class="nav-list">
+        <li class="nav-link"><a href="/">Accueil</a></li>
+        <li class="nav-link"><a href="/share">Recettes Partagées</a></li>
+        <li class="nav-link"><a href="/recipe">Mes recettes</a></li>
+        <li class="nav-link"><a href="/ingredient">Mes ingrédients</a></li>
+        <li class="nav-link"><a href="/profile">Mon profil</a></li>
+        <li class="nav-link"><a href="{{ path('logout') }}">Logout</a></li>
+    </ul>
+</nav>
 
 <div class="example-wrapper">
     <h1>AJOUTER DES RECETTES</h1>

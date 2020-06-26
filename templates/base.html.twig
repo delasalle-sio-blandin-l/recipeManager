@@ -11,17 +11,6 @@
          
     </head>
     <body>
-    {# Barre de navigation avec les onglets #}
-    <nav class="navbar">
-        <ul class="nav-list">
-            <li class="nav-link"><a href="/">Accueil</a></li>
-            <li class="nav-link"><a href="/share">Recettes Partagées</a></li>
-            <li class="nav-link"><a href="/recipe">Mes recettes</a></li>
-            <li class="nav-link"><a href="/ingredient">Mes ingrédients</a></li>
-            <li class="nav-link"><a href="/profile">Mon profil</a></li>
-            <li class="nav-link"><a href="{{ path('logout') }}">Logout</a></li>
-        </ul>
-    </nav>
         {% block body %}{% endblock %}
         {% block javascripts %}{% endblock %}
     </body>
